@@ -1,0 +1,117 @@
+/* Reset some default styles for better consistency */
+body, h1, h2, h3, p, label, input {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #009688;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00766c; /* Slightly darker green on hover */
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.catalog, .faq, .team {
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #00766c; /* Slightly darker green on hover */
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #009688;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.course-box {
+    width: 250px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.course-box a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.course-box img {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,65 @@
+/* Reset some default styles for better consistency */
+body, h1, h2, h3, p, th, td, img {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #009688;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+.team-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.team-table th, .team-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.team-table th {
+    background-color: #009688;
+    color: white;
+}
+
+.team-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.team-table td img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+}
+
+.btn {
+    display: block;
+    width: 150px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #009688;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #00766c;
+}
