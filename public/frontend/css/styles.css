@@ -72,7 +72,7 @@ main {
 }
 
 .btn:hover {
-    background-color: #00766c; /* Slightly darker green on hover */
+    background-color: #00766c; 
 }
 
 h1 {
@@ -115,6 +115,115 @@ footer {
 
 .contact p {
     margin-bottom: 10px;
+}
+
+
+/*<!--    your video part--> */
+
+#video-part {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#video-part h2 {
+    text-align: center;
+    font-family: 'IM Fell Great Primer', serif;
+    background-color: #EE1C25;
+    padding: 10px;
+    width: 200px;
+    margin: auto;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+#video-part h2:hover {
+    text-align: center;
+    font-family: 'IM Fell Great Primer', serif;
+    background-color: #000;
+    padding: 10px;
+    width: 200px;
+    margin: auto;
+    border-radius: 50px;
+    font-size: 20px;
+    box-shadow: 0px 0px 5px 5px #EE1C25;
+    color: #EE1C25;
+    transition: .6s;
+}
+
+.video-009p {
+    margin-top: 50px;
+}
+
+.video-info08 {
+    margin-top: 50px;
+    height: 480px;
+    border: 1px solid #EE1C25;
+    padding: 10px;
+    overflow: auto;
+}
+
+.thumnil001 {
+    float: left;
+}
+
+.thumnil001 img {
+    height: 50px;
+    width: 80px;
+}
+
+.thum002-details {
+    text-align: right;
+    color: black;
+}
+
+.thum002-details a {
+    color: black;
+    font-family: 'IM Fell Great Primer', serif;
+    font-weight: bold;
+}
+
+.combo007 {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+
+}
+
+#admission-ads {
+    padding: 50px;
+    background-color: black;
+}
+
+.askqes003 {
+    text-align: center;
+}
+
+.admission0006 {
+    color: white;
+    font-family: 'IM Fell Great Primer', serif;
+    font-weight: bold;
+}
+
+.ques008-button {
+    padding: 8px 25px 8px 25px;
+    background-color: #EE1C25;
+    border-radius: 20px;
+    margin-top: 30px;
+    border: none;
+    color: white;
+    transform: scale(1);
+    transition: .6s;
+}
+
+.ques008-button:hover {
+    padding: 8px 25px 8px 25px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-top: 30px;
+    border: none;
+    color: #EE1C25;
+    transform: scale(1.1);
+    transition: .6s;
 }
 
 /* Styles for the cards in "Our Subjects" section */

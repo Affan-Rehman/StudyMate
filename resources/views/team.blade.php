@@ -29,6 +29,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{url('/faq')}}">FAQ</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('/about')}}">About Us</a>
+                </li>
             </ul>
         </div>
     </nav>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\frontend\AboutController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\frontend\FaqController;
 use App\Http\Controllers\frontend\CourseController;
@@ -21,3 +22,4 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/faq', [FaqController::class, 'index']);
 Route::get('/courses', [CourseController::class, 'index']);
 Route::get('/team', [TeamController::class, 'index']);
+Route::get('/about', [AboutController::class, 'index']);
