@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education Platform</title>
+    <title>StudyMate</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Your custom CSS -->
@@ -76,8 +76,8 @@
             <div class="col-md-8">
                 <div class="video-009p">
                     <figure>
-                        <iframe width="754" height="480" src="https://www.youtube.com/embed/6dQXtSfN54k" frameborder="0"
-                            allowfullscreen></iframe>
+                        <iframe width="754" height="480" src="https://www.youtube.com/embed/B1J6Ou4q8vE" frameborder="3"
+                            allowfullscreen="true"></iframe>
                     </figure>
 
                 </div>
@@ -92,7 +92,7 @@
 
                         </div>
                         <div class="thum002-details">
-                            <a href="https://www.youtube.com/embed/6dQXtSfN54k" target="_blank">Video xyz</a>
+                            <a href="https://www.youtube.com/embed/B1J6Ou4q8vE" target="_blank">Video xyz</a>
 
                         </div>
                     </div>
@@ -102,7 +102,7 @@
                             <a href="#"><img src="{{url('frontend/images/youtube.png')}}" alt="image"></a>
                         </div>
                         <div class="thum002-details">
-                            <a href="https://youtu.be/6dQXtSfN54k" target="_blank">Video xyz</a>
+                            <a href="https://youtu.be/B1J6Ou4q8vE" target="_blank">Video xyz</a>
 
                         </div>
                     </div>
@@ -114,7 +114,7 @@
 
                         </div>
                         <div class="thum002-details">
-                            <a href="https://youtu.be/6dQXtSfN54k" target="_blank">Video xyz</a>
+                            <a href="https://youtu.be/B1J6Ou4q8vE" target="_blank">Video xyz</a>
 
                         </div>
                     </div>
@@ -126,7 +126,7 @@
 
                         </div>
                         <div class="thum002-details">
-                            <a href="https://youtu.be/6dQXtSfN54k" target="_blank">Video xyz</a>
+                            <a href="https://youtu.be/B1J6Ou4q8vE" target="_blank">Video xyz</a>
 
                         </div>
                     </div>
@@ -138,7 +138,7 @@
 
                         </div>
                         <div class="thum002-details">
-                            <a href="https://youtu.be/6dQXtSfN54k" target="_blank">Video xyz</a>
+                            <a href="https://youtu.be/B1J6Ou4q8vE" target="_blank">Video xyz</a>
 
                         </div>
                     </div>
@@ -148,7 +148,7 @@
                             <a href="#"> <img src="{{url('frontend/images/youtube.png')}}" alt="image"></a>
                         </div>
                         <div class="thum002-details">
-                            <a href="https://youtu.be/6dQXtSfN54k" target="_blank">Video xyz</a>
+                            <a href="https://youtu.be/B1J6Ou4q8vE" target="_blank">Video xyz</a>
 
                         </div>
                     </div>
@@ -158,7 +158,7 @@
                             <a href="#"> <img src="{{url('frontend/images/youtube.png')}}" alt="image"></a>
                         </div>
                         <div class="thum002-details">
-                            <a href="https://youtu.be/6dQXtSfN54k" target="_blank">Video xyz</a>
+                            <a href="https://youtu.be/B1J6Ou4q8vE" target="_blank">Video xyz</a>
 
                         </div>
                     </div>
@@ -168,7 +168,7 @@
                             <a href="#"> <img src="{{url('frontend/images/youtube.png')}}" alt="image"></a>
                         </div>
                         <div class="thum002-details">
-                            <a href="https://youtu.be/6dQXtSfN54k">Video xyz</a>
+                            <a href="https://youtu.be/B1J6Ou4q8vE">Video xyz</a>
 
                         </div>
                     </div>
@@ -178,7 +178,7 @@
                             <a href="#"> <img src="{{url('frontend/images/youtube.png')}}" alt="image"></a>
                         </div>
                         <div class="thum002-details">
-                            <a href="https://youtu.be/6dQXtSfN54k" target="_blank">Video xyz</a>
+                            <a href="https://youtu.be/B1J6Ou4q8vE" target="_blank">Video xyz</a>
 
                         </div>
                     </div>

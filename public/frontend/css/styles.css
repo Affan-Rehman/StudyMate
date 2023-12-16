@@ -120,35 +120,7 @@ footer {
 
 /*<!--    your video part--> */
 
-#video-part {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
 
-#video-part h2 {
-    text-align: center;
-    font-family: 'IM Fell Great Primer', serif;
-    background-color: #EE1C25;
-    padding: 10px;
-    width: 200px;
-    margin: auto;
-    border-radius: 50px;
-    font-size: 20px;
-}
-
-#video-part h2:hover {
-    text-align: center;
-    font-family: 'IM Fell Great Primer', serif;
-    background-color: #000;
-    padding: 10px;
-    width: 200px;
-    margin: auto;
-    border-radius: 50px;
-    font-size: 20px;
-    box-shadow: 0px 0px 5px 5px #EE1C25;
-    color: #EE1C25;
-    transition: .6s;
-}
 
 .video-009p {
     margin-top: 50px;
@@ -157,7 +129,7 @@ footer {
 .video-info08 {
     margin-top: 50px;
     height: 480px;
-    border: 1px solid #EE1C25;
+    border: 1px solid #009688;
     padding: 10px;
     overflow: auto;
 }
@@ -185,7 +157,7 @@ footer {
 .combo007 {
     margin-bottom: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 
 }
 
@@ -206,7 +178,7 @@ footer {
 
 .ques008-button {
     padding: 8px 25px 8px 25px;
-    background-color: #EE1C25;
+    background-color: #009688;
     border-radius: 20px;
     margin-top: 30px;
     border: none;
@@ -221,7 +193,7 @@ footer {
     border-radius: 20px;
     margin-top: 30px;
     border: none;
-    color: #EE1C25;
+    color: #009688;
     transform: scale(1.1);
     transition: .6s;
 }
