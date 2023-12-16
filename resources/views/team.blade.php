@@ -6,9 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Team - Education Platform</title>
     <link rel="stylesheet" href="{{url('frontend/css/teamstyle.css')}}">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{{url('/')}}">StudyMate</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('/')}}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('/courses')}}">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('/faq')}}">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <header>
         <h1>Meet Our Team</h1>
     </header>
@@ -92,7 +115,6 @@
                 </td>
             </tr>
         </table>
-        <a class="btn" href="{{url('/')}}">Back to Home</a>
     </main>
 </body>
 

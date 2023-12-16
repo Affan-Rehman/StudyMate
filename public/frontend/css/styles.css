@@ -1,5 +1,11 @@
 /* Reset some default styles for better consistency */
-body, h1, h2, h3, p, label, input {
+body,
+h1,
+h2,
+h3,
+p,
+label,
+input {
     margin: 0;
     padding: 0;
 }
@@ -42,7 +48,9 @@ main {
     text-align: center;
 }
 
-.catalog, .faq, .team {
+.catalog,
+.faq,
+.team {
     background-color: #fff;
     border: 1px solid #dcdcdc;
     border-radius: 10px;
@@ -91,6 +99,25 @@ footer {
     padding: 20px;
 }
 
+/* New styles for contact section */
+
+.contact {
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.contact form {
+    margin-bottom: 20px;
+}
+
+.contact p {
+    margin-bottom: 10px;
+}
+
+/* Styles for the cards in "Our Subjects" section */
 
 .course-box {
     width: 250px;
