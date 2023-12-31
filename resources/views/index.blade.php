@@ -14,8 +14,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">StudyMate</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -33,6 +32,9 @@
                     <a class="nav-link" href="#about">About Us</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#yt">Videos</a>
                 </li>
                 <li class="nav-item">
@@ -41,6 +43,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact Us</a>
                 </li>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a :href="route('logout')" onclick="event.preventDefault();this.closest('form').submit();">
+                        {{ __('Log Out') }}
+                    </a>
+                </form>
             </ul>
         </div>
     </nav>
@@ -50,6 +58,11 @@
             <h2 class="mb-3">Our Courses</h2>
             <p>Browse through our catalog of courses for reading material</p>
             <a class="btn btn-primary" href="{{url('/courses')}}">View All Courses</a>
+        </section>
+        <section class="catalog mt-5" id="blogs">
+            <h2 class="mb-3">Our Blogs</h2>
+            <p>Browse through our blogs and stay up to date with the latest news!</p>
+            <a class="btn btn-primary" href="{{url('/blogs')}}">View All Blog</a>
         </section>
 
         <section class="faq mt-5" id="faq">
@@ -76,8 +89,7 @@
             <div class="col-md-8">
                 <div class="video-009p">
                     <figure>
-                        <iframe width="754" height="480" src="https://www.youtube.com/embed/B1J6Ou4q8vE" frameborder="3"
-                            allowfullscreen="true"></iframe>
+                        <iframe width="754" height="480" src="https://www.youtube.com/embed/B1J6Ou4q8vE" frameborder="3" allowfullscreen="true"></iframe>
                     </figure>
 
                 </div>
@@ -200,9 +212,7 @@
                 <div class="mapshow004">
 
                     <figure>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.436275002665!2d72.9904261!3d33.6424888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df9675aaaaaaab%3A0xc5180922c44eb86b!2sNational%20University%20of%20Sciences%20%26%20Technology%20%28NUST%29!5e0!3m2!1sen!2sbd!4v1505965878201"
-                            width="1150" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.436275002665!2d72.9904261!3d33.6424888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df9675aaaaaaab%3A0xc5180922c44eb86b!2sNational%20University%20of%20Sciences%20%26%20Technology%20%28NUST%29!5e0!3m2!1sen!2sbd!4v1505965878201" width="1150" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
 
                     </figure>
 
@@ -230,8 +240,7 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"
-                            required></textarea>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Enter your message" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
@@ -252,7 +261,7 @@
         }
 
         // Function to handle form submission
-        document.getElementById('contactForm').addEventListener('submit', function (event) {
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
             var email = 'affanrehman1278@gmail.com';
@@ -275,8 +284,8 @@
 
     <script>
         // JavaScript for smooth scrolling
-        $(document).ready(function () {
-            $('a[href^="#"]').on('click', function (e) {
+        $(document).ready(function() {
+            $('a[href^="#"]').on('click', function(e) {
                 e.preventDefault();
 
                 var targetId = $(this).attr('href');

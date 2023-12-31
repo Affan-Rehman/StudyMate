@@ -15,8 +15,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{{url('/')}}">StudyMate</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -31,8 +30,17 @@
                     <a class="nav-link" href="{{url('/faq')}}">FAQ</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{url('/blogs')}}">Blogs</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{url('/team')}}">Team</a>
                 </li>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a :href="route('logout')" onclick="event.preventDefault();this.closest('form').submit();">
+                        {{ __('Log Out') }}
+                    </a>
+                </form>
             </ul>
         </div>
     </nav>
@@ -50,17 +58,13 @@
                         <div class="details469">
                             <div class="row" style="display: flex; justify-content: space-evenly; align-items: center;">
                                 <figure style="margin-right: 20px; text-align: center;" class="image-container">
-                                    <a href="https://www.linkedin.com/in/affan-rehman-22b262219/"
-                                        style="text-decoration: none;" target="_blank">
-                                        <img src="{{url('frontend/images/affan.jpeg')}}" alt="affan photo"
-                                            style="width: 200px; height: 200px; border-radius: 10px;">
+                                    <a href="https://www.linkedin.com/in/affan-rehman-22b262219/" style="text-decoration: none;" target="_blank">
+                                        <img src="{{url('frontend/images/affan.jpeg')}}" alt="affan photo" style="width: 200px; height: 200px; border-radius: 10px;">
                                     </a>
                                 </figure>
                                 <figure style="text-align: center;" class="image-container">
-                                    <a href="https://www.linkedin.com/in/hasan-fakhar-26581822a/"
-                                        style="text-decoration: none;" target="_blank">
-                                        <img src="{{url('frontend/images/hasan.jpeg')}}" alt="hasan photo"
-                                            style="width: 200px; height: 200px; border-radius: 10px;">
+                                    <a href="https://www.linkedin.com/in/hasan-fakhar-26581822a/" style="text-decoration: none;" target="_blank">
+                                        <img src="{{url('frontend/images/hasan.jpeg')}}" alt="hasan photo" style="width: 200px; height: 200px; border-radius: 10px;">
                                     </a>
                                 </figure>
                             </div>

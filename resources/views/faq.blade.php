@@ -14,8 +14,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{{url('/')}}">StudyMate</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -27,11 +26,22 @@
                     <a class="nav-link" href="{{url('/courses')}}">Courses</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url('/team')}}">Team</a>
+                    <a class="nav-link" href="{{url('/blogs')}}">Blogs</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{url('/about')}}">About Us</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('/team')}}">Team</a>
+                </li>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a :href="route('logout')" onclick="event.preventDefault();this.closest('form').submit();">
+                        {{ __('Log Out') }}
+                    </a>
+                </form>
+
+
             </ul>
         </div>
     </nav>
@@ -43,7 +53,7 @@
 
             <div class="tab">
                 <input type="checkbox" id="tab-one">
-                <label for="tab-one">1. I am willing to join Studymate but I can’t come on weekdays. What should I
+                <label for="tab-one">1. I am willing to join Studymate but I can't come on weekdays. What should I
                     do?</label>
                 <div class="tab-content">
                     <p>If you can't attend classes on weekdays, you can explore our weekend class options. Studymate

@@ -15,8 +15,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{{url('/')}}">StudyMate</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -28,11 +27,20 @@
                     <a class="nav-link" href="{{url('/faq')}}">FAQ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url('/team')}}">Team</a>
+                    <a class="nav-link" href="{{url('/blogs')}}">Blogs</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{url('/about')}}">About Us</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('/team')}}">Team</a>
+                </li>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a :href="route('logout')" onclick="event.preventDefault();this.closest('form').submit();">
+                        {{ __('Log Out') }}
+                    </a>
+                </form>
             </ul>
         </div>
     </nav>
@@ -72,8 +80,7 @@
                                 <li><a href="https://www.sparknotes.com/math/" target="_blank">SparkNotes</a></li>
                                 <li><a href="https://www.mathlearningcenter.org/curriculum/free" target="_blank">Math
                                         Learning Center</a></li>
-                                <li><a href="https://www.edutoday.in/2013/08/useful-teaching-learning-materials-tlm.html"
-                                        target="_blank">EduToday</a></li>
+                                <li><a href="https://www.edutoday.in/2013/08/useful-teaching-learning-materials-tlm.html" target="_blank">EduToday</a></li>
                             </ul>
                         </td>
                     </tr>
@@ -115,8 +122,7 @@
                             <ul>
                                 <li><a href="https://www.khanacademy.org/science/chemistry" target="_blank">Khan
                                         Academy</a></li>
-                                <li><a href="https://ocw.mit.edu/search/?d=Chemistry&s=department_course_numbers.sort_coursenum"
-                                        target="_blank">MIT OpenCourseWare</a></li>
+                                <li><a href="https://ocw.mit.edu/search/?d=Chemistry&s=department_course_numbers.sort_coursenum" target="_blank">MIT OpenCourseWare</a></li>
                                 <li><a href="https://www.coursera.org/courses?query=chemistry" target="_blank">Coursera
                                         - Chemistry</a></li>
                             </ul>
@@ -137,8 +143,7 @@
                         <td>
                             <ul>
                                 <li><a href="https://www.history.com/" target="_blank">History Channel</a></li>
-                                <li><a href="https://www.bbc.co.uk/programmes/genres/factual/history"
-                                        target="_blank">BBC History</a></li>
+                                <li><a href="https://www.bbc.co.uk/programmes/genres/factual/history" target="_blank">BBC History</a></li>
                                 <li><a href="https://www.worldhistoryatlas.com/" target="_blank">World History Atlas</a>
                                 </li>
                             </ul>
