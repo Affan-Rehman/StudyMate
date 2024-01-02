@@ -63,8 +63,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- we load courses and each course's photo is hardcoded into app, since the images we've put is
-                    7, we can only set 7 images for all courses, if it exceeds 7, it is assigned a random image -->
+                    <!-- we load teacher and teacher's photo is hardcoded into app, since the images we've put is
+                    7, we can only set 7 images for all teachers, if it exceeds 7, it is assigned a random image -->
                     @if (count($courses) > 0)
                     @php($i = 0)
                     @foreach ($courses as $course)

@@ -14,7 +14,8 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{{url('/')}}">StudyMate</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -60,16 +61,18 @@
                 </th>
             </tr>
             <tr>
-            @if (count($teams) > 0)
-        @php($i = 1)
-        @foreach ($teams as $team )
-        @php($i++)
-                    @php($j = $i)
-                    @if ($i > 7)
-                    @php($j = rand(1, 7)) {{-- Assign a random number between 1 and 7 to $j --}}
-                    @endif
+                <!-- we load teacher and teacher's photo is hardcoded into app, since the images we've put is
+                    7, we can only set 7 images for all teachers, if it exceeds 7, it is assigned a random image -->
+                @if (count($teams) > 0)
+                @php($i = 1)
+                @foreach ($teams as $team )
+                @php($i++)
+                @php($j = $i)
+                @if ($i > 7)
+                @php($j = rand(1, 7)) {{-- Assign a random number between 1 and 7 to $j --}}
+                @endif
                 <td>
-                    <img src="{{url('frontend/images/tea' .$j. '.jpg')}}" alt="Teacher {{!! $i !!}}">
+                    <img src="{{url('frontend/images/tea' .$j. '.jpg')}}" alt="Teacher {{$i}}">
                 </td>
                 <td>
                     <h3>{{$team['name']}}</h3>
@@ -79,9 +82,9 @@
                 </td>
             </tr>
             @endforeach
-        @else
-        <p>No team found.</p>
-        @endif
+            @else
+            <p>No team found.</p>
+            @endif
         </table>
     </main>
 </body>
