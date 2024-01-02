@@ -62,136 +62,27 @@
                     </tr>
                 </thead>
                 <tbody>
-
-                    <!-- Mathematics -->
+                @if (count($courses) > 0)
+                 @php($i = 1)
+                @foreach ($courses as $course)
                     <tr>
-                        <td>Mathematics</td>
+                        <td>{{$course['name']}}</td>
                         <td>
-                            Mathematics is the study of numbers, quantities, and shapes. Our Mathematics subject focuses
-                            on teaching various mathematical concepts, including algebra, calculus, and geometry. It's
-                            designed to help students build a strong foundation in mathematics and problem-solving
-                            skills.
+                            {{$course['description']}}
                         </td>
                         <td>
-                            <img src="{{url('frontend/images/tea1.jpg')}}" alt="John Smith">
+                            <img src="{{url('frontend/images/tea'. $i++ .'.jpg')}}">
                         </td>
                         <td>
                             <ul>
-                                <li><a href="https://www.sparknotes.com/math/" target="_blank">SparkNotes</a></li>
-                                <li><a href="https://www.mathlearningcenter.org/curriculum/free" target="_blank">Math
-                                        Learning Center</a></li>
-                                <li><a href="https://www.edutoday.in/2013/08/useful-teaching-learning-materials-tlm.html" target="_blank">EduToday</a></li>
+                                <li><a href="{{!! $course['link'] !!}}" target="_blank">{{$course['linkd']}}</a></li>
                             </ul>
                         </td>
                     </tr>
-
-                    <!-- Physics -->
-                    <tr>
-                        <td>Physics</td>
-                        <td>
-                            Physics is the study of matter, energy, and the fundamental forces of nature. Our Physics
-                            subject provides a comprehensive understanding of various physical phenomena, from classical
-                            mechanics to modern quantum physics. Students will explore the laws that govern the
-                            universe.
-                        </td>
-                        <td>
-                            <img src="{{url('frontend/images/tea2.jpg')}}" alt="James Johnson">
-                        </td>
-                        <td>
-                            <ul>
-                                <li><a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a></li>
-                                <li><a href="https://ocw.mit.edu/index.htm" target="_blank">MIT OpenCourseWare</a></li>
-                                <li><a href="https://www.physicsclassroom.com/" target="_blank">Physics Classroom</a>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-
-                    <!-- Chemistry -->
-                    <tr>
-                        <td>Chemistry</td>
-                        <td>
-                            Chemistry is the science of matter and its transformations. Our Chemistry subject covers
-                            topics such as chemical reactions, the periodic table, and molecular structures. Students
-                            will gain a deep understanding of chemical processes and their real-world applications.
-                        </td>
-                        <td>
-                            <img src="{{url('frontend/images/tea3.jpg')}}" alt="David Lee">
-                        </td>
-                        <td>
-                            <ul>
-                                <li><a href="https://www.khanacademy.org/science/chemistry" target="_blank">Khan
-                                        Academy</a></li>
-                                <li><a href="https://ocw.mit.edu/search/?d=Chemistry&s=department_course_numbers.sort_coursenum" target="_blank">MIT OpenCourseWare</a></li>
-                                <li><a href="https://www.coursera.org/courses?query=chemistry" target="_blank">Coursera
-                                        - Chemistry</a></li>
-                            </ul>
-                        </td>
-                    </tr>
-
-                    <!-- History -->
-                    <tr>
-                        <td>History</td>
-                        <td>
-                            History is the study of the past, where students explore the events and developments that
-                            have shaped the world. Our History subject covers various historical periods and important
-                            figures. Students will gain insights into the cultures and societies of different eras.
-                        </td>
-                        <td>
-                            <img src="{{url('frontend/images/tea4.jpg')}}" alt="Linda Davis">
-                        </td>
-                        <td>
-                            <ul>
-                                <li><a href="https://www.history.com/" target="_blank">History Channel</a></li>
-                                <li><a href="https://www.bbc.co.uk/programmes/genres/factual/history" target="_blank">BBC History</a></li>
-                                <li><a href="https://www.worldhistoryatlas.com/" target="_blank">World History Atlas</a>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-
-                    <!-- Literature -->
-                    <tr>
-                        <td>Literature</td>
-                        <td>
-                            Literature explores the world of written and spoken expression. Our Literature subject
-                            delves into classic and modern works of fiction, poetry, and drama. Students will analyze
-                            and appreciate the power of language and storytelling.
-                        </td>
-                        <td>
-                            <img src="{{url('frontend/images/tea5.jpg')}}" alt="Robert Wilson">
-                        </td>
-                        <td>
-                            <ul>
-                                <li><a href="https://www.poetryfoundation.org/" target="_blank">Poetry Foundation</a>
-                                </li>
-                                <li><a href="https://openstax.org/subjects/literature" target="_blank">OpenStax -
-                                        Literature</a></li>
-                                <li><a href="https://www.sparknotes.com/" target="_blank">SparkNotes</a></li>
-                            </ul>
-                        </td>
-                    </tr>
-
-                    <!-- Art -->
-                    <tr>
-                        <td>Art</td>
-                        <td>
-                            Art is a form of creative expression. Our Art subject encourages students to explore their
-                            artistic talents through drawing, painting, and other visual arts. They will learn about
-                            different artistic styles and techniques.
-                        </td>
-                        <td>
-                            <img src="{{url('frontend/images/tea6.jpg')}}" alt="Susan Brown">
-                        </td>
-                        <td>
-                            <ul>
-                                <li><a href="https://artsandculture.google.com/" target="_blank">Google Arts &
-                                        Culture</a></li>
-                                <li><a href="https://www.moma.org/" target="_blank">Museum of Modern Art</a></li>
-                                <li><a href="https://www.tate.org.uk/" target="_blank">Tate - Art</a></li>
-                            </ul>
-                        </td>
-                    </tr>
+                @endforeach
+                @else
+                <p>No courses found.</p>
+                @endif
 
                 </tbody>
             </table>

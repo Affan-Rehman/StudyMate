@@ -51,18 +51,19 @@
     <main>
         <div class="half">
         @if (count($faq) > 0)
+        @php($i = 1)
         @foreach ($faq as $fa)
 
             <div class="tab">
-                <input type="checkbox" id="tab-one">
-                <label for="tab-one">{{$fa['question']}}</label>
+                <input type="checkbox" id={!!$i!!}>
+                <label for={!!$i++!!}>{{$fa['question']}}</label>
                 <div class="tab-content">
                     <p>{{$fa['answer']}}</p>
                 </div>
             </div>
             @endforeach
         @else
-        <p>No blogs found.</p>
+        <p>No faq found.</p>
         @endif
 
         </div>

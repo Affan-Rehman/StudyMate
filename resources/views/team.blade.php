@@ -60,71 +60,23 @@
                 </th>
             </tr>
             <tr>
+            @if (count($teams) > 0)
+        @php($i = 1)
+        @foreach ($teams as $team )
                 <td>
-                    <img src="{{url('frontend/images/tea1.jpg')}}" alt="Teacher 1">
+                    <img src="{{url('frontend/images/tea' .$i++. '.jpg')}}" alt="Teacher {{!! $i !!}}">
                 </td>
                 <td>
-                    <h3>John Smith</h3>
+                    <h3>{{$team['name']}}</h3>
                 </td>
                 <td>
-                    <h3>Mathematics</h3>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="{{url('frontend/images/tea2.jpg')}}" alt="Teacher 2">
-                </td>
-                <td>
-                    <h3>James Johnson</h3>
-                </td>
-                <td>
-                    <h3>Physics</h3>
+                    <h3>{{$team['course']}}</h3>
                 </td>
             </tr>
-            <tr>
-                <td>
-                    <img src="{{url('frontend/images/tea3.jpg')}}" alt="Teacher 3">
-                </td>
-                <td>
-                    <h3>David Lee</h3>
-                </td>
-                <td>
-                    <h3>Chemistry</h3>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="{{url('frontend/images/tea4.jpg')}}" alt="Teacher 4">
-                </td>
-                <td>
-                    <h3>Linda Davis</h3>
-                </td>
-                <td>
-                    <h3>History</h3>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="{{url('frontend/images/tea5.jpg')}}" alt="Teacher 5">
-                </td>
-                <td>
-                    <h3>Robert Wilson</h3>
-                </td>
-                <td>
-                    <h3>Literature</h3>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="{{url('frontend/images/tea6.jpg')}}" alt="Teacher 6">
-                </td>
-                <td>
-                    <h3>Susan Brown</h3>
-                </td>
-                <td>
-                    <h3>Art</h3>
-                </td>
-            </tr>
+            @endforeach
+        @else
+        <p>No team found.</p>
+        @endif
         </table>
     </main>
 </body>
