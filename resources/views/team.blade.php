@@ -63,8 +63,13 @@
             @if (count($teams) > 0)
         @php($i = 1)
         @foreach ($teams as $team )
+        @php($i++)
+                    @php($j = $i)
+                    @if ($i > 7)
+                    @php($j = rand(1, 7)) {{-- Assign a random number between 1 and 7 to $j --}}
+                    @endif
                 <td>
-                    <img src="{{url('frontend/images/tea' .$i++. '.jpg')}}" alt="Teacher {{!! $i !!}}">
+                    <img src="{{url('frontend/images/tea' .$j. '.jpg')}}" alt="Teacher {{!! $i !!}}">
                 </td>
                 <td>
                     <h3>{{$team['name']}}</h3>
