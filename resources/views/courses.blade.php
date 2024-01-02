@@ -15,7 +15,8 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{{url('/')}}">StudyMate</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -62,27 +63,34 @@
                     </tr>
                 </thead>
                 <tbody>
-                @if (count($courses) > 0)
-                 @php($i = 1)
-                @foreach ($courses as $course)
+                    <!-- we load courses and each course's photo is hardcoded into app, since the images we've put is
+                    7, we can only set 7 images for all courses, if it exceeds 7, it is assigned a random image -->
+                    @if (count($courses) > 0)
+                    @php($i = 0)
+                    @foreach ($courses as $course)
+                    @php($i++)
+                    @php($j = $i)
+                    @if ($i > 7)
+                    @php($j = rand(1, 7)) {{-- Assign a random number between 1 and 7 to $j --}}
+                    @endif
                     <tr>
-                        <td>{{$course['name']}}</td>
+                        <td>{{$course['course']}}</td>
                         <td>
                             {{$course['description']}}
                         </td>
                         <td>
-                            <img src="{{url('frontend/images/tea'. $i++ .'.jpg')}}">
+                            <img src="{{url('frontend/images/tea'.$j.'.jpg')}}">
                         </td>
                         <td>
                             <ul>
-                                <li><a href="{{!! $course['link'] !!}}" target="_blank">{{$course['linkd']}}</a></li>
+                                <li><a href="{{$course['link']}}" target="_blank">{{$course['linkd']}}</a></li>
                             </ul>
                         </td>
                     </tr>
-                @endforeach
-                @else
-                <p>No courses found.</p>
-                @endif
+                    @endforeach
+                    @else
+                    <p>No courses found.</p>
+                    @endif
 
                 </tbody>
             </table>
